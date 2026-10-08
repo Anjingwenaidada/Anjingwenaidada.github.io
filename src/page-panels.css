@@ -1,0 +1,79 @@
+:root {
+  --header-height: 91px;
+  --page-background: #050608;
+  --panel-background: #0e1014;
+  background: var(--page-background);
+}
+
+html { scroll-padding-top: var(--header-height); }
+body { background: var(--page-background); }
+.site-header { background: #080a0ef2; }
+.nav-shell { height: calc(var(--header-height) - 1px); }
+
+/* Each section has its own quiet surface, separated by the black page. */
+.page-panel {
+  width: min(calc(100% - 40px), 1640px);
+  margin: 20px auto;
+  padding-block: clamp(32px, 4vh, 52px);
+  border: 1px solid #ffffff0b;
+  border-radius: 18px;
+  background: var(--panel-background);
+  scroll-margin-top: 0;
+}
+
+.page-panel > .container {
+  width: min(calc(100% - 96px), 1520px);
+}
+
+/* Main section titles share the About section's type and placement. */
+.page-panel .section-heading { align-items: flex-start; margin-bottom: 26px; }
+.page-panel .section-heading__title { min-width: 0; }
+.page-panel .section-heading h2 { font-weight: 700; line-height: 1.5; }
+.page-panel .section-description { align-self: flex-end; }
+.hero.hero-editorial.page-panel {
+  margin-top: 0;
+  padding-block: 0;
+  border-top: 0;
+  border-radius: 0 0 18px 18px;
+  background: radial-gradient(ellipse at 78% 42%, #141b2a 0%, transparent 58%), var(--panel-background);
+}
+.hero-editorial .hero-bottom { justify-content: flex-end; }
+.contact-section.page-panel { padding-bottom: 0; }
+.page-panel .contact-layout { padding-top: 0; padding-bottom: 52px; }
+.contact-layout > div > p:first-child { margin-top: 0; }
+.bio-content { align-self: start; }
+.bio-portrait-column .profile-portrait { margin-top: auto; }
+
+@media (min-width: 1001px) and (max-height: 900px) {
+  .section.page-panel, .contact-section.page-panel { padding-top: 28px; }
+  .about-resume.page-panel { padding-bottom: 28px; }
+  .page-panel .section-heading { margin-bottom: 22px; }
+  .page-panel .section-heading__title { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px 22px; }
+  .page-panel .section-heading h2 { order: -1; margin-top: 0; font-size: 32px; }
+  .bio-layout { grid-template-columns: clamp(280px, 29vw, 440px) minmax(0, 1fr); }
+  .bio-identity h3 { font-size: 38px; }
+  .bio-identity > p { margin-top: 10px; font-size: 13px; }
+  .bio-facts-grid { margin-top: 22px; column-gap: 24px; }
+  .bio-facts { font-size: 13px; line-height: 1.7; }
+  .bio-content h4 { font-size: 16px; }
+  .bio-projects-block { margin-top: 20px; }
+  .bio-project-strip { min-height: 80px; padding: 13px 16px; }
+  .bio-capabilities { margin-top: 24px; padding-top: 18px; }
+  .bio-capability-tags { margin-top: 12px; gap: 6px; }
+  .bio-capability-tags button { min-height: 30px; padding: 5px 10px; }
+}
+
+@media (max-width: 1200px) {
+  .page-panel > .container { width: calc(100% - 64px); }
+}
+
+@media (max-width: 760px) {
+  :root { --header-height: 75px; }
+  .page-panel { width: calc(100% - 20px); margin-block: 12px; padding-block: 28px; border-radius: 12px; }
+  .page-panel > .container { width: calc(100% - 32px); }
+  .page-panel .section-heading { margin-bottom: 24px; }
+  .page-panel .section-description { align-self: stretch; }
+  .hero.hero-editorial.page-panel { border-radius: 0 0 12px 12px; }
+  .page-panel .contact-layout { padding-bottom: 36px; }
+  .bio-portrait-column { max-width: 280px; }
+}

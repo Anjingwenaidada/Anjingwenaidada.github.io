@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url('/fonts/barlow-condensed-semibold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+.hero.hero-editorial {
+  background: radial-gradient(ellipse at 75% 45%, #12192c 0%, #090b11 54%, #080a0f 100%);
+  isolation: isolate;
+}
+
+.hero-editorial::before {
+  inset: 90px 0 0;
+  opacity: .35;
+  background-image: linear-gradient(#9db4fa0a 1px, transparent 1px), linear-gradient(90deg, #9db4fa0a 1px, transparent 1px);
+  background-size: 100px 100px;
+  mask-image: linear-gradient(90deg, transparent 25%, #000 80%);
+}
+
+.hero-editorial .hero-inner {
+  display: flex;
+  align-items: center;
+  min-height: min(960px, max(790px, 100svh));
+  padding-top: 153px;
+  padding-bottom: 138px;
+  column-gap: 0;
+}
+
+.hero-editorial .hero-copy { position: relative; z-index: 3; width: 59%; container-type: inline-size; }
+.hero-edition { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; color: #6f7b92; font: 500 12px/1.5 Arial, sans-serif; letter-spacing: 2.4px; }
+.hero-edition span { color: #334058; }
+.hero-editorial .hero-name { font-weight: 900; letter-spacing: normal; line-height: 1; margin: 0; }
+.hero-name-cn { display: block; color: #f1f1ef; font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif; font-size: clamp(88px, 9.1vw, 148px); font-weight: 900; letter-spacing: .055em; line-height: 1.06; margin-left: -.025em; }
+.hero-name-en { display: block; color: #f1f1ef; font-family: 'Barlow Condensed', Impact, 'Arial Narrow', sans-serif; font-weight: 600; font-size: clamp(28px, 12.1cqw, 108px); line-height: 1; letter-spacing: -.015em; white-space: nowrap; margin-top: 16px; }
+.hero-profession { margin-top: 28px; }
+.hero-profession p { color: #adc4fb; font-size: 17px; letter-spacing: 4px; line-height: 1.8; font-weight: 500; }
+.hero-profession p span { padding-inline: 5px; color: #7084ad; }
+.hero-profession > span { display: block; color: #6f8ab7; font-size: 11px; letter-spacing: 2.5px; line-height: 1.8; margin-top: 7px; }
+.hero-positioning { margin-top: 28px; max-width: 640px; }
+.hero-editorial .hero-description { color: #d6e0f1; margin: 0; font-size: clamp(20px, 1.65vw, 25px); font-weight: 500; line-height: 1.7; letter-spacing: .4px; text-wrap: balance; }
+.hero-profile-tags { display: flex; flex-wrap: wrap; gap: 9px; list-style: none; margin: 16px 0 0; padding: 0; max-width: 580px; }
+.hero-profile-tags li { padding: 6px 11px; border: 1px solid #819bd62b; border-radius: 4px; background: #7399e308; color: #a7b7d0; font-size: 12px; line-height: 1.5; letter-spacing: .2px; }
+.hero-editorial .hero-actions { display: flex; align-items: center; gap: 34px; margin-top: 30px; }
+.hero-work-link, .hero-resume-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 22px; font-size: 14px; line-height: 1.5; padding-block: 12px; transition: color .2s, border-color .2s; }
+.hero-work-link { color: #e2eafd; border-bottom: 1px solid #9ebafa; }
+.hero-work-link:hover { color: #9dbbff; border-color: #e5edff; }
+.hero-work-link svg { transition: transform .2s; }
+.hero-work-link:hover svg { transform: translate(3px,-3px); }
+.hero-resume-link { color: #8897b0; }
+.hero-resume-link:hover { color: #e2eafd; }
+.hero-portrait-stage { --portrait-center-x: 50%; position: absolute; z-index: 1; width: 52%; height: calc(100% - 135px); right: -25px; bottom: 0; pointer-events: none; }
+.hero-portrait-halo, .hero-orbit { left: var(--portrait-center-x); transform: translateX(-50%); }
+.hero-portrait-halo { position: absolute; width: 92%; aspect-ratio: 1; border-radius: 50%; top: 9%; background: radial-gradient(circle at 37% 26%, #48669c 0%, #293f6b 42%, #16233d 77%, #101826 100%); border: 1px solid #8ab1ff20; box-shadow: 0 0 110px #517af01a, inset 0 0 60px #abc7ff07; }
+.hero-orbit { position: absolute; width: 100%; aspect-ratio: 1; top: 5.8%; border-radius: 50%; border: 1px solid #9fbbff12; }
+.hero-orbit span { position: absolute; height: 5px; width: 5px; background: #9ebbf3; border-radius: 50%; box-shadow: 0 0 18px #8faaff80; top: 15%; left: 14%; }
+.hero-orbit span:last-child { top: auto; left: auto; right: 10%; bottom: 19%; width: 3px; height: 3px; opacity: .5; }
+/* Fade after the rim light is composited so it cannot illuminate the lower torso. */
+.hero-portrait-light { position: absolute; inset: 0; filter: drop-shadow(0 0 1.5px #9ccfff80) drop-shadow(0 0 4px #69aaff45); mask-image: linear-gradient(#000 86%, transparent 100%); }
+/* The face sits at 54.5% of the source width; align that visual axis with both circles. */
+.hero-portrait { position: absolute; display: block; height: 103%; max-width: 112%; width: auto; object-fit: contain; object-position: bottom; bottom: -7%; left: var(--portrait-center-x); transform: translateX(-54.5%); mask-image: url('/assets/portrait-user-mask-v3.png'); mask-mode: luminance; mask-size: 100% 100%; mask-repeat: no-repeat; }
+.hero-image-caption { position: absolute; top: 40%; right: -17px; writing-mode: vertical-rl; letter-spacing: 3px; color: #6e7f9e; font: 11px/1 Arial, sans-serif; }
+.hero-editorial .hero-bottom { z-index: 4; bottom: 32px; border-top: 0; color: #8e9ab0; padding-top: 0; font-size: 12px; letter-spacing: .7px; }
+.hero-signature { display: inline-flex; align-items: center; gap: 18px; }
+.hero-signature > span { display: inline-block; height: 2px; width: 43px; background: #9db7ee; }
+.hero-editorial .hero-bottom a { padding: 8px 0 8px 13px; }
+
+@media (min-width: 1700px) {
+  .hero-editorial .hero-inner { min-height: min(1050px, 100svh); padding-block: 180px 145px; }
+  .hero-portrait-stage { width: 52%; height: calc(100% - 135px); }
+  .hero-name-cn { font-size: 162px; }
+}
+
+@media (max-width: 1200px) {
+  .hero-editorial .hero-inner { min-height: 790px; padding-top: 151px; padding-bottom: 134px; }
+  .hero-editorial .hero-copy { width: 60%; }
+  .hero-name-cn { font-size: 106px; }
+  .hero-portrait-stage { width: 52%; height: calc(100% - 162px); right: -36px; }
+  .hero-portrait { height: 100%; bottom: -4%; }
+  .hero-portrait-halo { top: 12%; }
+  .hero-orbit { top: 9%; }
+  .hero-profession p { font-size: 16px; letter-spacing: 2.8px; }
+  .hero-profession > span { font-size: 10px; letter-spacing: 1.9px; }
+}
+
+@media (max-width: 960px) {
+  .hero-editorial .hero-inner { min-height: 730px; padding-block: 146px 125px; }
+  .hero-name-cn { font-size: 88px; }
+  .hero-portrait-stage { right: -28px; height: calc(100% - 178px); }
+  .hero-portrait { max-width: 120%; }
+  .hero-profession p { font-size: 14px; letter-spacing: 2px; }
+  .hero-profession > span { max-width: 310px; font-size: 10px; letter-spacing: 1.2px; }
+  .hero-editorial .hero-description { font-size: 20px; }
+  .hero-editorial .hero-actions { gap: 23px; }
+}
+
+@media (max-width: 760px) {
+  .hero-editorial .hero-inner { display: flex; flex-direction: column; align-items: stretch; min-height: auto; padding-block: 124px 87px; }
+  .hero-editorial .hero-copy { width: 100%; }
+  .hero-edition { margin-bottom: 21px; font-size: 10px; letter-spacing: 2px; }
+  .hero-name-cn { font-size: clamp(73px, 18vw, 125px); line-height: 1.09; }
+  .hero-name-en { margin-top: 12px; }
+  .hero-profession { margin-top: 25px; }
+  .hero-profession p { font-size: 15px; letter-spacing: 2px; }
+  .hero-profession > span { max-width: none; font-size: 10px; letter-spacing: 1.1px; }
+  .hero-positioning { margin-top: 25px; }
+  .hero-editorial .hero-description { font-size: 21px; }
+  .hero-profile-tags { gap: 8px; margin-top: 14px; }
+  .hero-editorial .hero-actions { margin-top: 20px; gap: 26px; }
+  .hero-portrait-stage { position: relative; width: min(100%, 470px); height: auto; aspect-ratio: .91; align-self: center; margin-top: 27px; right: auto; bottom: auto; }
+  .hero-portrait-light { mask-image: linear-gradient(#000 80%, transparent 96%); }
+  .hero-portrait { max-width: 100%; height: 116%; bottom: -10%; }
+  .hero-portrait-halo { width: 92%; top: 13%; }
+  .hero-orbit { width: 100%; top: 9.4%; }
+  .hero-image-caption { top: 39%; right: -2px; font-size: 9px; letter-spacing: 2px; }
+  .hero-editorial .hero-bottom { bottom: 26px; align-items: center; gap: 16px; font-size: 10px; }
+  .hero-signature { gap: 10px; max-width: 58%; line-height: 1.8; }
+  .hero-signature > span { width: 20px; flex-shrink: 0; }
+  .hero-editorial .hero-bottom a { font-size: 11px; gap: 8px; }
+}
+
+@media (max-width: 390px) {
+  .hero-editorial .hero-inner { padding-top: 117px; }
+  .hero-name-cn { font-size: 74px; }
+  .hero-profession p { font-size: 14px; letter-spacing: 1px; }
+  .hero-profession > span { font-size: 9px; letter-spacing: .7px; }
+  .hero-editorial .hero-description { font-size: 19px; }
+  .hero-profile-tags li { padding: 5px 9px; font-size: 11px; }
+  .hero-editorial .hero-actions { gap: 23px; }
+  .hero-work-link, .hero-resume-link { font-size: 13px; gap: 14px; }
+}
