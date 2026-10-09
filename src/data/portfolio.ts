@@ -13,7 +13,7 @@ export const profile = {
   name: '安静文', title: 'AI 产品经理', email: '870756182@qq.com',
   school: '石家庄铁道大学四方学院', degree: '本科', major: '产品设计',
   phone: '188-3324-4956', phoneLink: '18833244956',
-  resume: siteAsset('/assets/anjingwen-resume.pdf'), portrait: siteAsset('/assets/portrait.png'), wechat: siteAsset('/assets/wechat.jpg'),
+  resume: siteAsset('/assets/anjingwen-resume.pdf?v=20261009'), portrait: siteAsset('/assets/portrait.png'), wechat: siteAsset('/assets/wechat.jpg'),
   heroPortrait: siteAsset('/assets/portrait-user-v2.png'),
 }
 
