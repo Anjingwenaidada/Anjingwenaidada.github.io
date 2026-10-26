@@ -19,6 +19,10 @@
 .project-cover.has-cover .cover-headline { color: #f3f7ff; text-shadow: 0 2px 12px #0009; }
 .project-cover.has-cover .flow-step { color: #d1dff4; }
 .project-cover.has-cover .flow-step > span { background: #070d1870; border-color: #b9d4ff36; }
+.project-card.pink .project-cover-art::after { background: linear-gradient(90deg, #ffffff40, transparent 65%); }
+.project-card.pink .project-cover.has-cover .cover-headline { color: #342a40; text-shadow: 0 1px 10px #ffffffb3; }
+.project-card.pink .project-cover.has-cover .flow-step { color: #40364b; }
+.project-card.pink .project-cover.has-cover .flow-step > span { background: #ffffffe0; border-color: #ffffffa6; }
 .project-card .project-content { padding-top: 21px; }
 .project-card .project-content .tags { margin-bottom: 21px; }
 .project-card .project-bottom { flex-wrap: wrap; }

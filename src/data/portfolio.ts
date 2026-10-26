@@ -56,7 +56,7 @@ export const projects: Project[] = [
   { id: 'yuwu', url: 'https://yuwu-handcraft.k-zeus.chatgpt.site/', coverImage: siteAsset('/assets/project-covers/yuwu.png'), number: '04', name: '与物', category: '数字手作与创意互动平台', role: '独立产品设计与开发', theme: 'rose', coverTitle: '让手作，不受材料限制。', flow: ['自由创作', '桌面陪伴', '分享交换'], summary: '低门槛数字手作，自由创作、桌面陈列，并通过分享与盲盒交换延续创作乐趣。', tags: ['数字手作', '桌面互动', '盲盒交换'], overviewLabels: { problem: '项目背景' }, problem: '线下手作存在材料成本高、素材有限等门槛，现有数字创作产品也缺少丰富玩法与持续互动。为此设计“与物”，将数字手作、桌面陈列与作品交换结合，降低创作成本并增强情感陪伴。', solution: '负责产品定位、功能架构与核心流程设计，规划插花、珠饰、豆荚娃娃等创作模块，以及拖拽编辑、作品保存、桌面陈列、收藏、赠送和盲盒交换等能力。', outcome: '完成产品 0-1 方案与核心流程设计，形成“创作—陈列—陪伴—交换”闭环；完成 50 名种子用户招募与测试，收集反馈用于后续迭代。' },
   {
     id: 'xindong-house', number: '05', name: '心动小屋', category: 'AI 角色互动产品', role: '产品负责人',
-    url: 'http://101.35.233.25/', theme: 'pink', coverImage: siteAsset('/assets/project-covers/xindong-house.webp'),
+    url: 'http://101.35.233.25/', theme: 'pink', coverImage: siteAsset('/assets/project-covers/xindong-house-v3.png'),
     coverTitle: '从书里，走进心里。', flow: ['故事阅读', '角色收藏', '恋综互动'],
     summary: '融合故事阅读、角色收藏与多角色 AI 演绎，让读者与喜欢的角色继续互动，推进属于自己的恋综故事。',
     tags: ['角色 Prompt', '剧情记忆', 'AI 效果验收'], hideOverviewSubtitle: true,
