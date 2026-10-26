@@ -27,6 +27,7 @@
 .bio-project-teal { --cover-accent: 91 173 183; }
 .bio-project-violet { --cover-accent: 165 132 215; }
 .bio-project-rose { --cover-accent: 190 133 154; }
+.bio-project-pink { --cover-accent: 204 151 187; }
 .bio-project-art { position: absolute; inset: 0; z-index: -1; overflow: hidden; background: radial-gradient(ellipse at 92% 24%, rgb(var(--cover-accent) / .25), transparent 65%), linear-gradient(112deg, #111a28, #0f1520); }
 .bio-project-art::before { content: ''; position: absolute; width: 144px; height: 144px; right: -25px; top: -61px; border: 1px solid rgb(var(--cover-accent) / .25); border-radius: 50%; box-shadow: 0 0 0 16px rgb(var(--cover-accent) / .045), 0 0 0 34px rgb(var(--cover-accent) / .025); transform: rotate(-25deg) scaleX(1.3); }
 .bio-project-art::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #0b101be6, #0b101b45); }

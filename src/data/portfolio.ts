@@ -31,8 +31,9 @@ export type Project = {
     steps: { title: string; description: string }[];
     generationStrategy: string; productWork: string;
   };
-  tags: string[]; theme: string; coverTitle: string; coverImage?: string; flow: string[]; problem: string; solution: string; focus?: string;
-  overviewLabels?: { problem: string; focus?: string }; outcome?: string; hideOverviewSubtitle?: boolean;
+  tags: string[]; theme: string; coverTitle: string; coverImage?: string; flow: string[]; problem: string;
+  solution: string | { title: string; description: string }[]; focus?: string;
+  overviewLabels?: { problem: string; solution?: string; focus?: string }; outcome?: string; hideOverviewSubtitle?: boolean;
 }
 
 export const projects: Project[] = [
@@ -53,6 +54,23 @@ export const projects: Project[] = [
     productWork: '用户场景分析 · 功能流程设计 · 风格模板配置 · 生成效果评测 · 交互体验优化',
   }, coverImage: siteAsset('/assets/project-covers/zhiying-v4.png'), number: '03', name: '腾讯智影', category: 'AIGC 创作工具', role: 'AIGC 产品经理', theme: 'violet', coverTitle: '让创作，简单发生。', flow: ['风格选择', 'AI 智能生成', '作品输出'], summary: '将 AI 图像与视频生成能力封装为简单易用的创作工具，让用户轻松完成风格化内容创作。', tags: ['ComfyUI', 'LoRA', '模型评测'], overviewLabels: { problem: '项目背景' }, problem: '用户对个性化图片与视频内容需求持续增长，但传统影像工具操作复杂、创作门槛高。腾讯智影通过生成式 AI、计算机视觉与 LoRA，将专业影像能力封装为更易用的创作工具。', solution: '负责 AI 网感帮修、视频风格转绘、智能抠图、扩图等功能规划与 MVP 设计；协同算法团队封装 ComfyUI 工作流，引入自研 LoRA，并建立模板生产、效果验收和持续更新机制。', outcome: '完成 5 项视觉 AI 功能上线；自拍模板实现日更，带来大盘 DAU 增长 22%，用户留存率提升至 30%，图片保存率达到 80%。' },
   { id: 'yuwu', url: 'https://yuwu-handcraft.k-zeus.chatgpt.site/', coverImage: siteAsset('/assets/project-covers/yuwu.png'), number: '04', name: '与物', category: '数字手作与创意互动平台', role: '独立产品设计与开发', theme: 'rose', coverTitle: '让手作，不受材料限制。', flow: ['自由创作', '桌面陪伴', '分享交换'], summary: '低门槛数字手作，自由创作、桌面陈列，并通过分享与盲盒交换延续创作乐趣。', tags: ['数字手作', '桌面互动', '盲盒交换'], overviewLabels: { problem: '项目背景' }, problem: '线下手作存在材料成本高、素材有限等门槛，现有数字创作产品也缺少丰富玩法与持续互动。为此设计“与物”，将数字手作、桌面陈列与作品交换结合，降低创作成本并增强情感陪伴。', solution: '负责产品定位、功能架构与核心流程设计，规划插花、珠饰、豆荚娃娃等创作模块，以及拖拽编辑、作品保存、桌面陈列、收藏、赠送和盲盒交换等能力。', outcome: '完成产品 0-1 方案与核心流程设计，形成“创作—陈列—陪伴—交换”闭环；完成 50 名种子用户招募与测试，收集反馈用于后续迭代。' },
+  {
+    id: 'xindong-house', number: '05', name: '心动小屋', category: 'AI 角色互动产品', role: '产品负责人',
+    url: 'http://101.35.233.25/', theme: 'pink', coverImage: siteAsset('/assets/project-covers/xindong-house.webp'),
+    coverTitle: '从书里，走进心里。', flow: ['故事阅读', '角色收藏', '恋综互动'],
+    summary: '融合故事阅读、角色收藏与多角色 AI 演绎，让读者与喜欢的角色继续互动，推进属于自己的恋综故事。',
+    tags: ['角色 Prompt', '剧情记忆', 'AI 效果验收'], hideOverviewSubtitle: true,
+    overviewLabels: { problem: '项目背景', solution: '核心职责' },
+    problem: '面向小说读者与互动剧情爱好者，围绕“读完故事后，希望继续与喜欢的角色产生互动”的需求，参与打造融合故事阅读、角色收藏与多角色 AI 演绎的恋综互动产品。通过人物档案、连续剧情与关系反馈，将单向阅读延伸为用户可参与、可选择、可持续推进的故事体验。',
+    solution: [
+      { title: 'AI 方案设计', description: '设计平台互动流程：阅读小说 → 了解、收藏角色 → 选择三位男嘉宾 → 进入 20 天恋综 → 通过对话和选择推进关系与剧情。' },
+      { title: '角色 Prompt 设计', description: '整理人物性格、说话方式和关系边界，编写角色及场景提示词，约束初见过度亲密、替玩家作决定等行为。' },
+      { title: '上下文与记忆设计', description: '定义历史对话、玩家选择和关系变化的使用范围，区分公开事件与角色私信，明确各角色能知道哪些信息。' },
+      { title: '生成结果校验', description: '定义对白、选项和好感变化的输出字段，协同研发设计内容复核、规则校验和失败重试流程。' },
+      { title: 'AI 效果验收', description: '围绕人设偏离、忘记约定、秘密泄露和剧情跳步设计测试用例，根据失败案例调整 Prompt、上下文和校验规则。' },
+    ],
+    outcome: '项目获得 2026 知乎黑客松三等奖，项目已提供在线体验，形成故事阅读、人物档案、角色收藏、恋综互动与进度续玩等核心模块。通过角色知识、剧情记忆、规则调度与生成结果校验，建立可持续推进的多角色互动流程。累计用户量达到 2000 名。',
+  },
 ]
 
 export const capabilityTags: string[] = [

@@ -1,9 +1,13 @@
 .project-intro { padding: 27px 31px 24px; background: radial-gradient(ellipse at 100% 0%, var(--cover-glow), transparent 65%), var(--cover-base); }
 .project-card.rose .project-intro { --cover-glow: #534b3e; --cover-base: #2c2b25; --cover-ink: #c1baa7; --cover-bright: #ebe2d0; }
+.project-card.pink { --cover-glow: #624458; --cover-base: #2a202c; --cover-ink: #c9a5bd; --cover-bright: #edd6e6; }
 .project-title-group { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 14px; min-width: 0; }
 .project-category { color: var(--cover-ink); font-size: 12px; line-height: 1.6; }
 .modal .project-summary + .tags { margin-top: 21px; }
 .project-overview-footer { display: flex; justify-content: flex-end; margin-top: 24px; }
+.project-responsibilities { display: grid; gap: 19px; list-style: none; margin: 0; padding: 0; }
+.project-responsibilities li { padding-left: 16px; border-left: 2px solid #9eb5e033; }
+.project-responsibilities h4 { margin: 0 0 5px; color: #bdcbe3; font-size: 14px; font-weight: 500; }
 .project-index { flex-shrink: 0; color: var(--cover-ink); font-size: 12px; letter-spacing: 2px; }
 .project-intro .project-summary { color: var(--cover-bright); }
 .project-summary { color: #a6b4ca; font-size: 16px; line-height: 1.8; margin: 12px 0 0; }

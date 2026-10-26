@@ -24,7 +24,7 @@ export function About() {
           <div className="bio-content">
             <div className="bio-identity">
               <h3>{profile.name}</h3>
-              <p><span>3年AI产品经理</span><span>产品设计背景</span><span>4+AI项目落地</span><span>聚焦AIGC内容生产领域</span><span>AIGC内容深度创作者</span></p>
+              <p><span>3年AI产品经理</span><span>产品设计背景</span><span>{projects.length}+AI项目落地</span><span>聚焦AIGC内容生产领域</span><span>AIGC内容深度创作者</span></p>
             </div>
 
             <div className="bio-facts-grid">

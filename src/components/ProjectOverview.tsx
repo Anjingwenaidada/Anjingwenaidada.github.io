@@ -9,7 +9,12 @@ export function ProjectOverview({ project, onClose }: { project: Project; onClos
     <div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
     <div className="case-body">
       <div><h3>{project.overviewLabels?.problem ?? '用户与问题'}</h3><p>{project.problem}</p></div>
-      <div><h3>我的工作</h3><p>{project.solution}</p></div>
+      <div>
+        <h3>{project.overviewLabels?.solution ?? '我的工作'}</h3>
+        {typeof project.solution === 'string' ? <p>{project.solution}</p> : <ul className="project-responsibilities">
+          {project.solution.map(item => <li key={item.title}><h4>{item.title}</h4><p>{item.description}</p></li>)}
+        </ul>}
+      </div>
       {project.focus && <div><h3>{project.overviewLabels?.focus ?? '关键关注'}</h3><p>{project.focus}</p></div>}
       {project.outcome && <div><h3>项目成果</h3><p>{project.outcome}</p></div>}
     </div>
