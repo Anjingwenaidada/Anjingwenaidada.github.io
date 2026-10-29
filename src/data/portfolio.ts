@@ -76,10 +76,12 @@ export const projects: Project[] = [
     id: 'short-drama-works', number: '06', name: '我的短剧作品', category: '短剧创作', role: '个人创作',
     theme: 'blue', coverImage: siteAsset('/assets/project-covers/short-drama-works.png'), kind: 'work-collection',
     coverTitle: '让故事，被看见。', flow: ['故事构思', '镜头表达', '影像呈现'],
-    summary: '收录我的两部短剧作品，用镜头记录故事，呈现不同的影像叙事与创作表达。',
+    summary: '收录我的短剧作品，用镜头记录故事，呈现不同的影像叙事与创作表达。',
     examples: [
       { title: '9月14日 · 短剧作品', src: siteAsset('/assets/project-examples/short-drama/september-14.mp4'), poster: siteAsset('/assets/project-examples/short-drama/september-14.jpg') },
       { title: '8月31日 · 短剧作品', src: siteAsset('/assets/project-examples/short-drama/august-31.mp4'), poster: siteAsset('/assets/project-examples/short-drama/august-31.jpg') },
+      { title: '短剧作品 03', src: siteAsset('/assets/project-examples/short-drama/work-03.mp4'), poster: siteAsset('/assets/project-examples/short-drama/work-03.jpg') },
+      { title: '短剧作品 04', src: siteAsset('/assets/project-examples/short-drama/work-04.mp4'), poster: siteAsset('/assets/project-examples/short-drama/work-04.jpg') },
     ],
     tags: ['短剧作品', '影像叙事', '创作记录'], hideOverviewSubtitle: true,
     problem: '短剧作品与剧情介绍将在后续更新。', solution: '制作过程与创作细节将在后续补充。',
