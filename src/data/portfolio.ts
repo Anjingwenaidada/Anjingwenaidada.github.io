@@ -24,7 +24,7 @@ export const experiences = [
 ]
 
 export type Project = {
-  id: string; number: string; name: string; category: string; role: string; summary: string; url?: string;
+  id: string; number: string; name: string; category: string; role: string; summary: string; url?: string; comingSoon?: boolean;
   examples?: { title: string; src: string; poster?: string }[];
   exampleProcess?: {
     title: string; intro: string; reference: string; templateDescription: string;
@@ -70,6 +70,14 @@ export const projects: Project[] = [
       { title: 'AI 效果验收', description: '围绕人设偏离、忘记约定、秘密泄露和剧情跳步设计测试用例，根据失败案例调整 Prompt、上下文和校验规则。' },
     ],
     outcome: '项目获得 2026 知乎黑客松三等奖，项目已提供在线体验，形成故事阅读、人物档案、角色收藏、恋综互动与进度续玩等核心模块。通过角色知识、剧情记忆、规则调度与生成结果校验，建立可持续推进的多角色互动流程。累计用户量达到 2000 名。',
+  },
+  {
+    id: 'short-drama-works', number: '06', name: '我的短剧作品', category: '短剧创作', role: '个人创作',
+    theme: 'blue', coverImage: siteAsset('/assets/project-covers/short-drama-works.png'), comingSoon: true,
+    coverTitle: '让故事，被看见。', flow: ['故事构思', '镜头表达', '影像呈现'],
+    summary: '这里收录我的短剧作品，记录从故事构思、镜头表达，到影像呈现的创作过程。',
+    tags: ['短剧作品', '影像叙事', '创作记录'], hideOverviewSubtitle: true,
+    problem: '短剧作品与剧情介绍将在后续更新。', solution: '制作过程与创作细节将在后续补充。',
   },
 ]
 

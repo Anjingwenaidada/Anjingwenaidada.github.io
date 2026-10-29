@@ -18,7 +18,19 @@ export function Projects() {
         {project.coverImage && <div className="project-cover-art" aria-hidden="true"><img src={project.coverImage} alt="" loading="lazy" /></div>}
         <div className="cover-headline">{project.coverTitle}</div><div className="cover-flow">{project.flow.map((step, index) => <div key={step} className="flow-step"><span>{step}</span>{index < project.flow.length - 1 && <ArrowRight size={16} />}</div>)}</div><span className="cover-number">{project.number}</span>
       </div>
-      <div className="project-content"><div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div><div className="project-bottom"><span>{project.role}</span><div className="project-actions"><button type="button" className="project-overview-button" onClick={() => setSelected(project)} aria-label={`查看${project.name}项目介绍`}>项目介绍 <ArrowRight size={15} /></button>{project.examples && <button type="button" className="project-visit-link" onClick={() => setExampleProject(project)} aria-haspopup="dialog" aria-label={`查看${project.name}项目示例`}>项目示例 <Play size={16} /></button>}{project.url && <a className="project-visit-link" href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`${project.name}项目链接（新窗口）`}>项目链接 <ArrowUpRight size={16} /></a>}</div></div></div>
+      <div className="project-content">
+        <div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
+        <div className="project-bottom">
+          <span>{project.role}</span>
+          <div className="project-actions">
+            {project.comingSoon ? <span className="project-coming-soon">作品即将更新</span> : <>
+              <button type="button" className="project-overview-button" onClick={() => setSelected(project)} aria-label={`查看${project.name}项目介绍`}>项目介绍 <ArrowRight size={15} /></button>
+              {project.examples && <button type="button" className="project-visit-link" onClick={() => setExampleProject(project)} aria-haspopup="dialog" aria-label={`查看${project.name}项目示例`}>项目示例 <Play size={16} /></button>}
+              {project.url && <a className="project-visit-link" href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`${project.name}项目链接（新窗口）`}>项目链接 <ArrowUpRight size={16} /></a>}
+            </>}
+          </div>
+        </div>
+      </div>
     </article>)}</div>
     {selected && <ProjectOverview project={selected} onClose={() => setSelected(null)} />}
     {exampleProject && <ProjectExamples project={exampleProject} onClose={() => setExampleProject(null)} />}

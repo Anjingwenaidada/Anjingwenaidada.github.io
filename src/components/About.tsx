@@ -10,6 +10,7 @@ import './About.css'
 export function About() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [selectedTag, setSelectedTag] = useState<string | null>(null)
+  const publishedProjects = projects.filter(project => !project.comingSoon)
 
   return (
     <section id="about" className="section page-panel about-resume">
@@ -24,7 +25,7 @@ export function About() {
           <div className="bio-content">
             <div className="bio-identity">
               <h3>{profile.name}</h3>
-              <p><span>3年AI产品经理</span><span>产品设计背景</span><span>{projects.length}+AI项目落地</span><span>聚焦AIGC内容生产领域</span><span>AIGC内容深度创作者</span></p>
+              <p><span>3年AI产品经理</span><span>产品设计背景</span><span>{publishedProjects.length}+AI项目落地</span><span>聚焦AIGC内容生产领域</span><span>AIGC内容深度创作者</span></p>
             </div>
 
             <div className="bio-facts-grid">
@@ -47,7 +48,7 @@ export function About() {
             <div className="bio-projects-block">
               <h4>代表项目</h4>
               <ul className="bio-projects">
-                {projects.map(project => <li key={project.id}>
+                {publishedProjects.map(project => <li key={project.id}>
                   <button type="button" className={`bio-project-strip bio-project-${project.theme}${project.coverImage ? ' has-cover' : ''}`} data-selected={selectedProject?.id === project.id} onClick={() => setSelectedProject(project)} aria-haspopup="dialog" aria-label={`查看${project.name}项目摘要`}>
                     <span className="bio-project-art" aria-hidden="true">
                       {project.coverImage && <img src={project.coverImage} alt="" loading="lazy" />}

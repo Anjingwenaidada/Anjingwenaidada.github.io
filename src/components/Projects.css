@@ -24,6 +24,7 @@
 .project-card .project-content .tags { margin-bottom: 21px; }
 .project-card .project-bottom { flex-wrap: wrap; }
 .project-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+.project-coming-soon { display: inline-flex; padding: 7px 11px; border: 1px solid #a7baff26; border-radius: 5px; background: #a7baff08; font-size: 13px; line-height: 1.5; color: #a6b3ce; }
 .project-overview-button, .project-visit-link { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; line-height: 1.5; }
 .project-overview-button { color: #a6b3ce; border: 0; padding: 7px 0; background: transparent; }
 .project-visit-link { color: #d4e4ff; padding: 7px 11px; border: 1px solid #80b1ff45; border-radius: 5px; background: #79aaff0c; }
