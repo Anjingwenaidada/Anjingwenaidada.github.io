@@ -10,7 +10,7 @@ import './About.css'
 export function About() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [selectedTag, setSelectedTag] = useState<string | null>(null)
-  const publishedProjects = projects.filter(project => !project.comingSoon)
+  const publishedProjects = projects.filter(project => !project.comingSoon && project.kind !== 'work-collection')
 
   return (
     <section id="about" className="section page-panel about-resume">

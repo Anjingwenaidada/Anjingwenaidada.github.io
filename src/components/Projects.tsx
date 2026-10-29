@@ -24,8 +24,8 @@ export function Projects() {
           <span>{project.role}</span>
           <div className="project-actions">
             {project.comingSoon ? <span className="project-coming-soon">作品即将更新</span> : <>
-              <button type="button" className="project-overview-button" onClick={() => setSelected(project)} aria-label={`查看${project.name}项目介绍`}>项目介绍 <ArrowRight size={15} /></button>
-              {project.examples && <button type="button" className="project-visit-link" onClick={() => setExampleProject(project)} aria-haspopup="dialog" aria-label={`查看${project.name}项目示例`}>项目示例 <Play size={16} /></button>}
+              {project.kind !== 'work-collection' && <button type="button" className="project-overview-button" onClick={() => setSelected(project)} aria-label={`查看${project.name}项目介绍`}>项目介绍 <ArrowRight size={15} /></button>}
+              {project.examples && <button type="button" className="project-visit-link" onClick={() => setExampleProject(project)} aria-haspopup="dialog" aria-label={project.kind === 'work-collection' ? `观看${project.name}` : `查看${project.name}项目示例`}>{project.kind === 'work-collection' ? '观看作品' : '项目示例'} <Play size={16} /></button>}
               {project.url && <a className="project-visit-link" href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`${project.name}项目链接（新窗口）`}>项目链接 <ArrowUpRight size={16} /></a>}
             </>}
           </div>
