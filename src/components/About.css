@@ -12,7 +12,7 @@
 .bio-identity > p { display: flex; flex-wrap: wrap; gap: 8px 0; margin-top: 15px; font-size: 15px; line-height: 1.7; color: #a8b9d5; }
 .bio-identity > p span + span::before { content: '/'; display: inline-block; margin-inline: 13px; color: #4f627f; }
 .bio-content h4 { font-size: 18px; line-height: 1.6; font-weight: 550; color: #e0e7f3; letter-spacing: .6px; }
-.bio-facts-grid { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 22px 36px; margin-top: 29px; }
+.bio-facts-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px 36px; margin-top: 29px; }
 .bio-facts { display: flex; flex-direction: column; gap: 9px; margin: 12px 0 0; font-size: 14px; line-height: 1.85; }
 .bio-facts > div { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 6px; align-items: start; }
 .bio-facts dt { display: flex; align-items: center; gap: 5px; color: #768cab; font-size: 12px; white-space: nowrap; padding-top: 2px; }
@@ -70,7 +70,7 @@
   .bio-identity h3 { font-size: 34px; }
   .bio-identity > p { font-size: 13px; margin-top: 10px; }
   .bio-identity > p span + span::before { margin-inline: 8px; }
-  .bio-facts-grid { grid-template-columns: max-content minmax(0, 1fr); gap: 24px; }
+  .bio-facts-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .bio-content h4 { font-size: 17px; }
 }
 

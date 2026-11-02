@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ArrowUpRight, BookOpen, Check, GraduationCap, Mail, Phone } from 'lucide-react'
+import { ArrowUpRight, BookOpen, Check, GraduationCap } from 'lucide-react'
 import { capabilityTags, profile, projects } from '../data/portfolio'
 import type { Project } from '../data/portfolio'
 import { SectionHeading } from './SectionHeading'
@@ -29,13 +29,6 @@ export function About() {
             </div>
 
             <div className="bio-facts-grid">
-              <div className="bio-facts-block">
-                <h4>基本信息</h4>
-                <dl className="bio-facts">
-                  <div><dt><Phone size={15} aria-hidden="true" />电话</dt><dd><a href={`tel:${profile.phoneLink}`}>{profile.phone}</a></dd></div>
-                  <div><dt><Mail size={15} aria-hidden="true" />邮箱</dt><dd><a href={`mailto:${profile.email}`}>{profile.email}</a></dd></div>
-                </dl>
-              </div>
               <div className="bio-facts-block">
                 <h4>教育背景</h4>
                 <dl className="bio-facts">
